@@ -130,29 +130,6 @@
         </executions>
       </plugin>
 
-      <!-- Copy the built webapp to the directory used by Quarkus -->
-      <plugin>
-        <artifactId>maven-resources-plugin</artifactId>
-        <version>${version.resources-plugin}</version>
-        <executions>
-          <execution>
-            <id>copy-resources</id>
-            <phase>process-resources</phase>
-            <goals>
-              <goal>copy-resources</goal>
-            </goals>
-            <configuration>
-              <outputDirectory>${basedir}/target/classes/META-INF/resources/</outputDirectory>
-              <resources>
-                <resource>
-                  <directory>webapp/build/</directory>
-                  <filtering>false</filtering>
-                </resource>
-              </resources>
-            </configuration>
-          </execution>
-        </executions>
-      </plugin>
       <plugin>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>${compiler-plugin.version}</version>
